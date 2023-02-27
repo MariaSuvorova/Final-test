@@ -34,6 +34,20 @@ string[] InitSorteredArray (int newArrayLength, string[] unsortedArray)
     return sorteredArray;
 }
 
+void PrintArray(string[] array)
+{
+    if (array.Length > 0)
+    {
+        Console.Write("[");
+        for (int i = 0; i < array.Length-1; i++)
+        {
+            Console.Write($"{array[i]},");
+        }
+        Console.Write($"{array[array.Length-1]}]");
+    }
+    else Console.WriteLine($"[]");
+}
+
 Console.WriteLine("Введите строки массива через пробел");
 string charInLine = Console.ReadLine();
 string[] arrayOfLines = charInLine.Split(" ");
