@@ -53,3 +53,4 @@ string charInLine = Console.ReadLine();
 string[] arrayOfLines = charInLine.Split(" ");
 int n = SorteredArrayLength(arrayOfLines);
 string[] resultArray = InitSorteredArray(n, arrayOfLines);
+PrintArray(resultArray);
