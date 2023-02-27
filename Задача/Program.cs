@@ -15,6 +15,27 @@ int SorteredArrayLength(string[] array)
     return n;
 }
 
+string[] InitSorteredArray (int newArrayLength, string[] unsortedArray)
+{
+    string[] sorteredArray = new string[newArrayLength];
+    int i = 0;
+    while (i < newArrayLength)
+    {
+        for (int j = 0; j < unsortedArray.Length; j++)
+        {
+            string element = unsortedArray[j];
+            if (element.Length <= 3)
+            {
+                sorteredArray[i] = unsortedArray[j];
+                i++;
+            }
+        }
+    }
+    return sorteredArray;
+}
+
 Console.WriteLine("Введите строки массива через пробел");
 string charInLine = Console.ReadLine();
 string[] arrayOfLines = charInLine.Split(" ");
+int n = SorteredArrayLength(arrayOfLines);
+string[] resultArray = InitSorteredArray(n, arrayOfLines);
